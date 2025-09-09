@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-46HYPPDPBG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-46HYPPDPBG');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aroman EMETSHU - Média Buyer & Consultant Meta ADS</title>
+    <link rel="icon" href="https://i.postimg.cc/Dwmb1RcS/5.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -76,13 +69,9 @@
         .logo-text {
             font-size: 24px;
             font-weight: 800;
-            color: var(--jaune);
+            color: var(--blanc); /* Changé de jaune à blanc */
             text-transform: uppercase;
             letter-spacing: 1px;
-        }
-        
-        .logo-text span {
-            color: var(--blanc);
         }
         
         nav ul {
@@ -654,6 +643,7 @@
         
         .contact-details {
             list-style: none;
+            margin-bottom: 30px;
         }
         
         .contact-details li {
@@ -719,6 +709,114 @@
             width: 60px;
             height: 3px;
             background-color: var(--jaune);
+        }
+        
+        /* Form Styles améliorés */
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--gris-fonce);
+            font-size: 16px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+            background-color: #f9f9f9;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--bleu);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+            background-color: var(--blanc);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .phone-group {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .country-code {
+            flex: 0 0 120px;
+        }
+        
+        .phone-number {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--bleu), #004a99);
+            color: var(--blanc);
+            border: none;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.4);
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        
+        .form-message {
+            display: none;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
         }
         
         /* Footer */
@@ -864,6 +962,15 @@
             .form-container {
                 padding: 30px 20px;
             }
+            
+            .phone-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .country-code {
+                flex: 1;
+            }
         }
         
         @media (max-width: 576px) {
@@ -902,16 +1009,12 @@
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K82FLG4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- Header & Navigation -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <img src="https://i.postimg.cc/XqLsS3Z1/0.png" alt="Aroman EMETSHU Logo">
-                <div class="logo-text">Aroman <span>EMETSHU</span></div>
+                <div class="logo-text">Aroman EMETSHU</div> <!-- Tout en blanc -->
             </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -1145,9 +1248,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <p>PME, Services</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Contact -->
@@ -1168,26 +1268,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     
                     <h3>Réseaux Sociaux</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61574953794341" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/aroman_emetshu?igsh=YXd3ejZxNXg4YTho" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/aroman_emetshu?t=jPm7BO7TmJchyhK8YJF-5Q&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 
                 <div class="form-container">
                     <h3>Formulaire de Contact</h3>
-                    <iframe  
-                        allowtransparency="true"
-                        allow="geolocation; microphone; camera; fullscreen; payment"
-                        src="https://form.jotform.com/252466781102051"
-                        frameborder="0"
-                        style="min-width:100%;max-width:100%;height:539px;border:none;"
-                        scrolling="no"
-                    >
-                    </iframe>
-                    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-                    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252466781102051']", "https://form.jotform.com/")</script>
+                    <form id="contact-form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <div class="phone-group">
+                                <div class="form-group country-code">
+                                    <label for="country-code">Code pays</label>
+                                    <select id="country-code" name="country-code" class="form-control" required>
+                                        <option value="">Sélectionner</option>
+                                        <option value="+242">+242 (Congo)</option>
+                                        <option value="+243">+243 (RDC)</option>
+                                        <option value="+33">+33 (France)</option>
+                                        <option value="+32">+32 (Belgique)</option>
+                                        <option value="+1">+1 (États-Unis/Canada)</option>
+                                        <option value="+44">+44 (Royaume-Uni)</option>
+                                        <option value="+49">+49 (Allemagne)</option>
+                                        <option value="+41">+41 (Suisse)</option>
+                                        <option value="+34">+34 (Espagne)</option>
+                                        <option value="+39">+39 (Italie)</option>
+                                        <option value="+90">+90 (Turquie)</option>
+                                        <option value="+971">+971 (Émirats Arabes Unis)</option>
+                                        <option value="+225">+225 (Côte d'Ivoire)</option>
+                                        <option value="+221">+221 (Sénégal)</option>
+                                        <option value="+234">+234 (Nigeria)</option>
+                                        <option value="+254">+254 (Kenya)</option>
+                                        <option value="+27">+27 (Afrique du Sud)</option>
+                                        <option value="other">Autre</option>
+                                    </select>
+                                </div>
+                                <div class="form-group phone-number">
+                                    <label for="phone-number">Numéro</label>
+                                    <input type="tel" id="phone-number" name="phone-number" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Envoyer le message</button>
+                    </form>
+                    <div id="success-message" class="form-message success-message">
+                        Merci pour votre message! Je vous recontacterai très soon.
+                    </div>
+                    <div id="error-message" class="form-message error-message">
+                        Une erreur s'est produite. Veuillez réessayer ou me contacter directement par WhatsApp.
+                    </div>
                 </div>
             </div>
         </div>
@@ -1217,6 +1364,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li><i class="fas fa-phone"></i> +242 06 745 8011</li>
                         <li><i class="fas fa-envelope"></i> contact@aromanemetshu.com</li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suivez-moi</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61574953794341" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/aroman_emetshu?igsh=YXd3ejZxNXg4YTho" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/aroman_emetshu?t=jPm7BO7TmJchyhK8YJF-5Q&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="copyright">
@@ -1291,6 +1446,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
+        
+        // Form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission (in a real scenario, you would use Formspree or similar)
+            const submitBtn = this.querySelector('.submit-btn');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
+            
+            // Simulate API call
+            setTimeout(() => {
+                successMessage.style.display = 'block';
+                errorMessage.style.display = 'none';
+                this.reset();
+                
+                // Redirect to home page after 3 seconds
+                setTimeout(() => {
+                    window.location.href = '#accueil';
+                }, 3000);
+                
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer le message';
+            }, 2000);
+        });
     </script>
 </body>
 </html>
