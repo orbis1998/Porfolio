@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-   <!-- Meta Pixel Code -->
+      <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -31,6 +31,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
             --blanc: #FFFFFF;
             --jaune: #FFD700;
             --bleu: #0066CC;
+            --bleu-facebook: #1877F2; /* Nouvelle variable pour le bleu Facebook */
             --gris-fonce: #333333;
             --gris-clair: #F5F5F5;
         }
@@ -87,7 +88,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         .logo-text {
             font-size: 24px;
             font-weight: 800;
-            color: var(--blanc); /* Changé de jaune à blanc */
+            color: var(--blanc);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -197,16 +198,11 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         #accueil h1 {
             font-size: 62px;
             margin-bottom: 20px;
-            color: var(--blanc);
+            color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 2px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-        }
-        
-        #accueil .highlight {
-            color: var(--jaune);
-            font-weight: 800;
         }
         
         #accueil p {
@@ -218,7 +214,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         
         .btn {
             display: inline-block;
-            background-color: var(--bleu);
+            background-color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
             color: var(--blanc);
             padding: 15px 40px;
             text-decoration: none;
@@ -228,15 +224,15 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 16px;
-            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
-            border: 2px solid var(--bleu);
+            box-shadow: 0 5px 15px rgba(24, 119, 242, 0.3); /* Changé pour correspondre au bleu Facebook */
+            border: 2px solid var(--bleu-facebook); /* Changé pour le bleu Facebook */
         }
         
         .btn:hover {
             background-color: transparent;
-            color: var(--bleu);
+            color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.4);
+            box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4); /* Changé pour correspondre au bleu Facebook */
         }
         
         .btn-whatsapp {
@@ -269,9 +265,92 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
             color: var(--blanc);
         }
         
+        /* À propos de moi */
+        #about {
+            background-color: var(--gris-clair);
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            text-align: center;
+        }
+        
+        .about-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+        
+        .about-image img:hover {
+            transform: scale(1.03);
+        }
+        
+        .about-content h3 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            color: var(--noir);
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--jaune);
+        }
+        
+        .about-content p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: var(--gris-fonce);
+            line-height: 1.8;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, var(--bleu-facebook), #0e5fcf); /* Changé pour le bleu Facebook */
+            padding: 25px 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: var(--blanc);
+            box-shadow: 0 5px 15px rgba(24, 119, 242, 0.3); /* Changé pour correspondre au bleu Facebook */
+        }
+        
+        .stat-value {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--jaune);
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
         /* Services */
         #services {
-            background-color: var(--gris-clair);
+            background-color: var(--blanc);
         }
         
         .services-grid {
@@ -298,7 +377,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
             left: 0;
             width: 5px;
             height: 100%;
-            background-color: var(--bleu);
+            background-color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
             transition: width 0.3s;
         }
         
@@ -314,7 +393,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         
         .service-card i {
             font-size: 50px;
-            color: var(--bleu);
+            color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
             margin-bottom: 25px;
             transition: color 0.3s;
         }
@@ -335,6 +414,10 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         }
         
         /* Tarifs */
+        #tarifs {
+            background-color: var(--gris-clair);
+        }
+        
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -367,7 +450,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         .price {
             font-size: 50px;
             font-weight: 800;
-            color: var(--bleu);
+            color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
             margin-bottom: 30px;
             position: relative;
             display: inline-block;
@@ -401,7 +484,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
             content: '\f00c';
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
-            color: var(--bleu);
+            color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
             position: absolute;
             left: 0;
             top: 50%;
@@ -465,12 +548,12 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         }
         
         .metric-card {
-            background: linear-gradient(135deg, var(--bleu), #004a99);
+            background: linear-gradient(135deg, var(--bleu-facebook), #0e5fcf); /* Changé pour le bleu Facebook */
             padding: 25px 20px;
             border-radius: 10px;
             text-align: center;
             color: var(--blanc);
-            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+            box-shadow: 0 5px 15px rgba(24, 119, 242, 0.3); /* Changé pour correspondre au bleu Facebook */
         }
         
         .metric-value {
@@ -514,11 +597,11 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         
         .chart-bar {
             width: 60px;
-            background: linear-gradient(to top, var(--bleu), #004a99);
+            background: linear-gradient(to top, var(--bleu-facebook), #0e5fcf); /* Changé pour le bleu Facebook */
             border-radius: 5px 5px 0 0;
             position: relative;
             transition: height 1s;
-            box-shadow: 0 2px 10px rgba(0, 102, 204, 0.2);
+            box-shadow: 0 2px 10px rgba(24, 119, 242, 0.2); /* Changé pour correspondre au bleu Facebook */
         }
         
         .chart-bar span {
@@ -673,7 +756,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         
         .contact-details li i {
             margin-right: 15px;
-            color: var(--bleu);
+            color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
             font-size: 24px;
             width: 30px;
             text-align: center;
@@ -699,7 +782,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         }
         
         .social-links a:hover {
-            background-color: var(--bleu);
+            background-color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
             transform: translateY(-5px);
         }
         
@@ -755,8 +838,8 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         
         .form-control:focus {
             outline: none;
-            border-color: var(--bleu);
-            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+            border-color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
+            box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.1); /* Changé pour correspondre au bleu Facebook */
             background-color: var(--blanc);
         }
         
@@ -779,7 +862,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         }
         
         .submit-btn {
-            background: linear-gradient(135deg, var(--bleu), #004a99);
+            background: linear-gradient(135deg, var(--bleu-facebook), #0e5fcf); /* Changé pour le bleu Facebook */
             color: var(--blanc);
             border: none;
             padding: 18px 35px;
@@ -791,7 +874,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
             text-transform: uppercase;
             letter-spacing: 1px;
             width: 100%;
-            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+            box-shadow: 0 5px 15px rgba(24, 119, 242, 0.3); /* Changé pour correspondre au bleu Facebook */
             position: relative;
             overflow: hidden;
         }
@@ -809,7 +892,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.4);
+            box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4); /* Changé pour correspondre au bleu Facebook */
         }
         
         .submit-btn:hover::before {
@@ -834,7 +917,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         .error-message {
             background-color: #f8d7da;
             color: #721c24;
-            border: 1px solid #f5c6cb;
+            border: 1px solid #f5c6cb);
         }
         
         /* Footer */
@@ -869,7 +952,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
             left: 0;
             width: 40px;
             height: 2px;
-            background-color: var(--bleu);
+            background-color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
         }
         
         .footer-col p, .footer-col li {
@@ -889,7 +972,7 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
         
         .footer-col ul li i {
             margin-right: 10px;
-            color: var(--bleu);
+            color: var(--bleu-facebook); /* Changé pour le bleu Facebook */
         }
         
         .copyright {
@@ -912,6 +995,17 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
             .btn {
                 padding: 12px 30px;
                 font-size: 14px;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .about-content h3::after {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
         
@@ -989,6 +1083,11 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
             .country-code {
                 flex: 1;
             }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1027,16 +1126,12 @@ src="https://www.facebook.com/tr?id=503410315534737&ev=PageView&noscript=1"
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K82FLG4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- Header & Navigation -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <img src="https://i.postimg.cc/XqLsS3Z1/0.png" alt="Aroman EMETSHU Logo">
-                <div class="logo-text">Aroman EMETSHU</div> <!-- Tout en blanc -->
+                <div class="logo-text">Aroman EMETSHU</div>
             </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -1044,6 +1139,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <nav>
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#tarifs">Tarifs</a></li>
                     <li><a href="#cas">Étude de cas</a></li>
@@ -1058,7 +1154,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="accueil">
         <div class="container">
             <div class="accueil-content">
-                <h1>AROMAN <span class="highlight">EMETSHU</span></h1>
+                <h1>AROMAN EMETSHU</h1>
                 <p>Média Buyer & Consultant Expert Meta ADS</p>
                 <p>11 ans d'expérience sur Facebook • 7 ans sur Instagram • 4 ans à aider les entreprises à réussir</p>
                 <div class="btn-container">
@@ -1068,6 +1164,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="meta-badge">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/800px-Meta_Platforms_Inc._logo.svg.png" alt="Meta Logo" style="height: 30px;">
                     <span>Partenaire Meta certifié</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos de moi -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>À propos de moi</h2>
+                <p>Découvrez mon parcours et mon expertise</p>
+            </div>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="https://i.postimg.cc/sxpsPCr0/20250916-103231.png" alt="Aroman EMETSHU">
+                </div>
+                <div class="about-content">
+                    <h3>Qui suis-je ?</h3>
+                    <p>Media Buyer spécialisé en Meta Ads depuis 4 ans, j'ai conçu des campagnes louables pour +50 entrepreneurs & PME et 7 marques locales. Mon objectif : transformer vos dépenses pub en investissements rentables.</p>
+                    <p>J'optimise chaque euro dépensé pour vous générer plus de ventes, plus rapidement. Coach, e-commerçant ou business en ligne, je m'adapte à votre secteur pour vous offrir des résultats concrets et mesurables.</p>
+                    <p>Avec une approche stratégique et data-driven, je vous aide à maximiser votre retour sur investissement publicitaire et à développper votre entreprise de manière durable.</p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">4+</div>
+                            <div class="stat-label">Ans d'expérience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Entrepreneurs & PME</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">7</div>
+                            <div class="stat-label">Marques locales</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1214,7 +1346,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <h4>Répartition du budget publicitaire</h4>
                     <div class="chart">
                         <div class="chart-bar" style="height: 40%; background-color: var(--jaune);"><span>20%</span><div class="month">Recherche</div></div>
-                        <div class="chart-bar" style="height: 75%; background-color: var(--bleu);"><span>35%</span><div class="month">Retargeting</div></div>
+                        <div class="chart-bar" style="height: 75%; background-color: var(--bleu-facebook);"><span>35%</span><div class="month">Retargeting</div></div>
                         <div class="chart-bar" style="height: 60%; background-color: var(--gris-fonce);"><span>30%</span><div class="month">Conversion</div></div>
                         <div class="chart-bar" style="height: 30%; background-color: var(--noir);"><span>15%</span><div class="month">Notoriété</div></div>
                     </div>
@@ -1270,6 +1402,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <p>PME, Services</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact -->
@@ -1324,7 +1459,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <option value="+49">+49 (Allemagne)</option>
                                         <option value="+41">+41 (Suisse)</option>
                                         <option value="+34">+34 (Espagne)</option>
-                                        <option value="+39">+39 (Italie)</option>
+                                        <option value="+39">+39 (Italy)</option>
                                         <option value="+90">+90 (Turquie)</option>
                                         <option value="+971">+971 (Émirats Arabes Unis)</option>
                                         <option value="+225">+225 (Côte d'Ivoire)</option>
@@ -1446,7 +1581,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         // Animate elements on scroll
         function animateOnScroll() {
-            const elements = document.querySelectorAll('.service-card, .pricing-card, .metric-card, .testimonial-card');
+            const elements = document.querySelectorAll('.service-card, .pricing-card, .metric-card, .testimonial-card, .about-image, .about-content');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
@@ -1460,7 +1595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         
         // Initialize elements for animation
-        document.querySelectorAll('.service-card, .pricing-card, .metric-card, .testimonial-card').forEach(element => {
+        document.querySelectorAll('.service-card, .pricing-card, .metric-card, .testimonial-card, .about-image, .about-content').forEach(element => {
             element.style.opacity = 0;
             element.style.transform = 'translateY(50px)';
             element.style.transition = 'all 0.8s ease';
